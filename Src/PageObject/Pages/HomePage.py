@@ -8,7 +8,6 @@ class Home(object):
 
     def __init__(self, driver):
         self.driver = driver
-        
         # Home page locators definition
         # Locate element by XPath
         self.logo = driver.find_element(By.XPATH, Locator.logo)
