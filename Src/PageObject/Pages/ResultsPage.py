@@ -1,10 +1,7 @@
 __author__ = 'Enrique Cosio'
 
-from selenium.webdriver.common.by import By
-from selenium-python-web-automation.Src.PageObject.Locators import Locator
-
-from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from selenium-python-web-automation.Src.PageObject.Locators import Locator
 
@@ -13,6 +10,7 @@ class SearchResults(object):
 
     def __init__(self, driver):
         self.driver = driver
+        # Results page locators definition
         self.sort_menu = driver.find_element(By.XPATH, Locator.sort_menu)
         self.review_hover_menu = driver.find_element(By.XPATH, Locator.review_hover_menu)
         self.create_list_link = driver.find_element(By.XPATH, Locator.create_list_link)
