@@ -2,8 +2,8 @@ __author__ = 'Enrique Cosio'
 
 import unittest
 from time import sleep
-from Selenium-Python-Web-Automation.Src.TestBase.EnvironmentSetUp import EnvironmentSetup
-from Selenium-Python-Web-Automation.Src.PageObject.Pages.HomePage import Home
+from selenium-python-web-automation.Src.TestBase.EnvironmentSetUp import EnvironmentSetup
+from selenium-python-web-automation.Src.PageObject.Pages.HomePage import Home
 from selenium.common.exceptions import NoSuchElementException
 
 
