@@ -47,7 +47,6 @@ class ProductSearch(EnvironmentSetup):
 
         # Validates hover over menu
         results.selectCreateList(driver)
-        sleep(3)
 
 
 if __name__ == '__main__':
