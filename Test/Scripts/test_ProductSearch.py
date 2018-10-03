@@ -1,18 +1,11 @@
 __author__ = 'Enrique Cosio'
 
-import unittest
-from time import sleep
-from selenium-python-web-automation.Src.TestBase.EnvironmentSetUp import EnvironmentSetup
-from selenium-python-web-automation.Src.PageObject.Pages.HomePage import Home
-from selenium.common.exceptions import NoSuchElementException
-
-
 class ProductSearch(EnvironmentSetup):
 
     # Test case method
-    def test_product_search_flow(self):
+    def test_product_search(self):
         driver = self.driver
-        
+       
         expected_title = "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more"
 
         # Validates page title through catching exception
@@ -35,6 +28,7 @@ class ProductSearch(EnvironmentSetup):
         try:
             home.setSearchBar("Tablet")
             home.submitProductSearch()
+            print("Product search executed")
         except NoSuchElementException:
             print("Product search failed")
 
@@ -42,11 +36,20 @@ class ProductSearch(EnvironmentSetup):
         results = SearchResults(driver)
 
         # Validates product sorting
-        results.setSortingOrder("Price: High to Low")
+        try:
+            results.setSortingOrder("Price: High to Low")
+            print("Sorting executed")
+        except NoSuchElementException:
+            print("Sorting failed")
         sleep(1)
 
         # Validates hover over menu
-        results.selectCreateList(driver)
+        try:
+            results.selectCreateList(driver)
+            print("Hover over executed")
+        except NoSuchElementException:
+            print("Hover over executed")
+        sleep(4)
 
 
 if __name__ == '__main__':
