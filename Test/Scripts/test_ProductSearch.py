@@ -4,7 +4,6 @@ import unittest
 from time import sleep
 from Selenium-Python-Web-Automation.Src.TestBase.EnvironmentSetUp import EnvironmentSetup
 from Selenium-Python-Web-Automation.Src.PageObject.Pages.HomePage import Home
-from Selenium.Python-Web-Automation.Test.TestUtility.ScreenShot import SS
 from selenium.common.exceptions import NoSuchElementException
 
 
